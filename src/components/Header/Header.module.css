@@ -1,0 +1,12 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1em;
+    background-color: palevioletred;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    gap:1em;
+}
