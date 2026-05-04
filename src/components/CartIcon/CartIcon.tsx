@@ -1,4 +1,4 @@
-import { ShoppingBasket, ShoppingCart  } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import styles from './CartIcon.module.css'
 
 export default function CartIcon({}){

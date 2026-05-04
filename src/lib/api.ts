@@ -1,4 +1,4 @@
-export async function getProducts(){ 
+async function getAPIResponse(){
     try {
         const response = await fetch(`${process.env.API_URL}`,{
             headers: {
@@ -10,9 +10,17 @@ export async function getProducts(){
         }
 
         const result = await response.json();
-        return result.products;
+        return result;
     } catch (error) {
         const message = error instanceof Error? error.message : String(error);
         console.error(message);
     }
+}
+export async function getProducts(){ 
+    const result = await getAPIResponse();
+    return result.products;
+}
+export async function getLogo(){ 
+    const result = await getAPIResponse();
+    return result.logo;
 }
