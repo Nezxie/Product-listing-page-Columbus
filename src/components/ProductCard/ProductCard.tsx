@@ -15,11 +15,13 @@ export default function ProductCard({data}:{data:Product}){
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
           </div>
-            <h2>{data.title}</h2>
+            <h2 className={styles.productTitle}>{data.title}</h2>
             <BrandBadge name={data.brandName} logo={data.brandLogo}/>
-            <p>{data.description}</p>
-            <p>{data.price}</p>
-              <button>Add to cart</button>
+            <p className={styles.productDescription}>{data.description}</p>
+            <div className={styles.priceContainer}>
+              <p className={styles.price}>{data.price}</p>
+              <button className={styles.addToCartButton}>Add to cart</button>
+            </div>
         </article>
      )
 }

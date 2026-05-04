@@ -1,5 +1,5 @@
 .page {
-  --background: #fafafa;
+  --background: #eef2f7;
   --foreground: #fff;
 
   --text-primary: #000;
@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-geist-sans);
+  font-family: var(--dmSans);
   background-color: var(--background);
 }
 
@@ -146,5 +146,21 @@ a.secondary {
 .productGrid{
   display: grid;
   gap:1em;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-items: stretch;
+}
+
+/*tablet*/
+@media only screen and (min-width: 768px) and (max-width:1200px){
+  .productGrid{
+    margin:0em auto;
+    max-width: 900px;
+  }
+}
+/*desktop*/
+@media only screen and (min-width: 1200px){
+  .productGrid{
+    margin:0em auto;
+    max-width: 1000px;
+  }
 }

@@ -1,9 +1,17 @@
 .headerContainer{
+    --header-text-color:#fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding:1em;
-    background-color: palevioletred;
+    background-color: var(--color-primary);
+    h1,p{
+        color:var(--header-text-color)
+    }
+    h1{
+        font-family: var(--audiowide);
+        letter-spacing: 5px;
+    }
 }
 .brand{
     display: flex;

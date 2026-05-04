@@ -1,5 +1,18 @@
 .badgeContainer{
     display: flex;
     align-items: center;
-    gap: 2em;
+    justify-content: space-between;
+    gap: .5em;
+    margin:.2em 0 1em 0;
+
+}
+.badgeContainer>p{
+    font-size: .8em;
+}
+.image{
+    border-radius: 4px;
+    max-width: 200px;
+    max-height: 1.5em;
+    width: auto;
+    height: auto;
 }

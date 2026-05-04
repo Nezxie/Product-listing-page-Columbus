@@ -6,6 +6,7 @@ export default function BrandBadge({name,logo}:{name:string,logo:string}){
         <div className={styles.badgeContainer}>
             <p>{name}</p>
             <Image
+                className={styles.image}
                 height={60}
                 width={160}
                 src={logo}
