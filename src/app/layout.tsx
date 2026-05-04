@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Audiowide } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header"
+import {CartWrapper} from "@/lib/CartStateWrapper"
 
 const audiowide = Audiowide ({
   weight:["400"],
@@ -30,8 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${audiowide.variable} ${dmSans.variable}`}>
       <body>
-        <Header/>
-        {children}
+        <CartWrapper>
+          <Header/>
+          {children}
+        </CartWrapper>
         </body>
     </html>
   );

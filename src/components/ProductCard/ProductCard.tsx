@@ -1,7 +1,8 @@
-import Image from "next/image";
 import {Product} from '@/types/product'
 import styles from './ProductCard.module.css'
+import Image from "next/image";
 import BrandBadge from '@/components/BrandBadge/BrandBadge'
+import AddToCartButton from '@/components/AddToCartButton/AddToCartButton'
 import {formatCurrency, getDiscountedPrice} from '@/lib/price'
 
 export default function ProductCard({data}:{data:Product}){
@@ -27,7 +28,7 @@ export default function ProductCard({data}:{data:Product}){
                 <p className={styles.price}>{formatCurrency(getDiscountedPrice(data.price,data.promotion.percentage))}</p>
                   :""}
               </div>
-              <button className={styles.addToCartButton}>Add to cart</button>
+              <AddToCartButton/>
             </div>
         </article>
      )
