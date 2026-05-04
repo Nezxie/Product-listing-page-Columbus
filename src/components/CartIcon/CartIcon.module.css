@@ -1,0 +1,18 @@
+.shoppingCartIcon{
+    color:#fff;
+    position: relative;
+}
+.counterBubble{
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #ef4444;
+    color: #fff;
+    font-size: 10px;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
