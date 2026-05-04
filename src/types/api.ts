@@ -7,6 +7,6 @@ export interface APIResponse{
     products: Product[]
 }
 export interface Branding{
-    logo:Image,
-    title:string
+    logo?:Image,
+    title?:string
 }

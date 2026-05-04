@@ -30,9 +30,8 @@ export async function getProducts():Promise<Product[]>{
 
 export async function getBranding():Promise<Branding>{
     const result = await getAPIResponse();
-    const branding = {
-        "logo":result?.logo||{url:"",altText:"Shop logo"},
-        "title":result?.title||"Fallback shop name"
+    return {
+        "logo":result?.logo,
+        "title":result?.title
     }
-    return branding;
 }

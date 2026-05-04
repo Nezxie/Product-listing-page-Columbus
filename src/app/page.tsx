@@ -6,11 +6,12 @@ import ProductCard from "@/components/ProductCard/ProductCard";
 export default async function Home() {
   const productList = await getProducts();
   return (
-    <main>
+    <main className={styles.main}>
       <section className={styles.productGrid}>
-        {productList.map((product:Product)=>{
+        {productList.length>0?productList.map((product:Product)=>{
           return <ProductCard key={product.articleNumber} data={product}/>
-        })}
+        }):
+        <p className={styles.empty}>No products to display</p>}
       </section>
 
     </main>

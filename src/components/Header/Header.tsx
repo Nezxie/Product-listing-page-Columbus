@@ -9,14 +9,17 @@ export default async function Header(){
     return(
         <header className={styles.headerContainer}>
             <Link href="/" className={styles.brand}>
+            {branding.logo?.url?
                 <Image
                 className={styles.logomark}
                 height={60}
                 width={160}
                 src={branding.logo.url}
                 alt={branding.logo.altText}
-            />
-                <h1>{branding.title}</h1>
+                />
+            :<div aria-hidden="true" className={styles.logoFallback}>C</div>
+            }
+            <h1>{branding.title ?? "Columbus Graduate Program Recruitment Task"}</h1>
             </Link>
             <CartIcon/>
         </header>

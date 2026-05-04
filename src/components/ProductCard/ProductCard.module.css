@@ -39,7 +39,7 @@
     font-size: .9em;
     font-weight: 400;
     text-decoration: line-through;
-    color: var(--color-accent)
+    color: var(--text--accent);
 }
 .promotionLabel{
     background-color: var(--color-accent);

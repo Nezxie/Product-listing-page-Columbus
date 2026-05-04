@@ -3,6 +3,7 @@
   --foreground: #171717;
   --color-primary:#0a1a33;
   --color-accent:#e0e9c9;
+  --text--accent:#737767;
   --header-text-color:#ffffff;
 }
 
@@ -10,6 +11,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --text--accent:#e0e9c9;
   }
 }
 
