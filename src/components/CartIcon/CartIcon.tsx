@@ -6,8 +6,8 @@ import {useCartState} from '@/lib/CartStateWrapper'
 export default function CartIcon(){
     const counter = useCartState()?.cartCounter||0;
     return(
-    <div className={styles.shoppingCartIcon}>
-        <ShoppingCart />
+    <div className={styles.iconContainer}>
+        <ShoppingCart className={styles.icon} />
         {counter>0?<span className={styles.counterBubble}>{counter}</span>:""}
     </div>
     )
