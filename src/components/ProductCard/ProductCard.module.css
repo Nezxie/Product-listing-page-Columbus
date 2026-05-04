@@ -41,10 +41,6 @@
     text-decoration: line-through;
     color: var(--color-accent)
 }
-.discountedPrice{
-    font-weight: 600;
-    /* color:#ef4444; */
-}
 .addToCartButton{
     padding: .8em 1.5em;
     font-family: var(--dm-Sans);

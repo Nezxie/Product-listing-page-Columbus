@@ -24,7 +24,7 @@ export default function ProductCard({data}:{data:Product}){
               <div>
                 <p className={data.promotion?styles.crossedOutPrice:styles.price}>{formatCurrency(data.price)}</p>
                 {data.promotion?
-                <p className={styles.discountedPrice}>{formatCurrency(getDiscountedPrice(data.price,data.promotion.percentage))}</p>
+                <p className={styles.price}>{formatCurrency(getDiscountedPrice(data.price,data.promotion.percentage))}</p>
                   :""}
               </div>
               <button className={styles.addToCartButton}>Add to cart</button>
