@@ -1,5 +1,5 @@
 .shoppingCartIcon{
-    color:#fff;
+    color:var(--header-text-color);
     position: relative;
 }
 .counterBubble{

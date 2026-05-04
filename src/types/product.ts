@@ -1,7 +1,5 @@
-interface ProductImage {
-    url:string,
-    altText:string,
-}
+import {Image} from '@/types/image'
+
 interface Promotion {
     name:string
     percentage:number
@@ -10,7 +8,7 @@ export interface Product {
     articleNumber:string,
     ean:string,
 	link:string,
-	image:ProductImage,
+	image:Image,
 	title:string,
 	description:string,
 	brandName:string,

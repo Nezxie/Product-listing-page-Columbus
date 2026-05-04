@@ -2,7 +2,8 @@
   --background: #ffffff;
   --foreground: #171717;
   --color-primary:#0a1a33;
-  --color-accent:#A5B37D;
+  --color-accent:#e0e9c9;
+  --header-text-color:#ffffff;
 }
 
 @media (prefers-color-scheme: dark) {

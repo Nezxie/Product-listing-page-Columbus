@@ -8,15 +8,20 @@
     padding:.8em 2em;
     background-color: var(--color-primary);
     h1,p{
-        color:#fff;
+        color:var(--header-text-color);
     }
     h1{
-        font-family: var(--audiowide);
-        letter-spacing: 5px;
+        font-family: var(--spaceGrotesk);
     }
 }
 .brand{
     display: flex;
     align-items: center;
     gap:1em;
+}
+.logomark{
+    max-width: 200px;
+    max-height: 2em;
+    width: auto;
+    height: auto;
 }
