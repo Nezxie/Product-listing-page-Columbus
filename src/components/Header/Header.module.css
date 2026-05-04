@@ -14,6 +14,7 @@
     h1{
         font-family: var(--spaceGrotesk);
         font-size: 1em;
+        font-weight: 200;
     }
 }
 .brand{
@@ -34,6 +35,9 @@
     padding: .5em;
     border-radius: 8px;
     font-family: var(--spaceGrotesk);
+}
+.logoFallback::after{
+    content:"C";
 }
 
 @media only screen and (min-width: 768px) and (max-width:1200px){

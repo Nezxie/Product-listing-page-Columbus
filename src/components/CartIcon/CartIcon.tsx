@@ -4,11 +4,11 @@ import styles from './CartIcon.module.css'
 import {useCartState} from '@/lib/CartStateWrapper'
 
 export default function CartIcon(){
-    const counter = useCartState()?.cartCounter||0;
+    const counter = useCartState().cartCounter;
     return(
-    <div className={styles.iconContainer}>
+    <div className={styles.iconContainer} aria-label={`Cart with ${counter} items`}>
         <ShoppingCart className={styles.icon} />
-        {counter>0?<span className={styles.counterBubble}>{counter}</span>:""}
+        {counter>0&&<span className={styles.counterBubble}>{counter}</span>}
     </div>
     )
 }

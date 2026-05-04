@@ -1,6 +1,5 @@
 import styles from "./page.module.css";
 import {getProducts} from "@/lib/api"
-import {Product} from '@/types/product'
 import ProductCard from "@/components/ProductCard/ProductCard";
 
 export default async function Home() {
@@ -8,12 +7,11 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <section className={styles.productGrid}>
-        {productList.length>0?productList.map((product:Product)=>{
+        {productList.length>0?productList.map((product)=>{
           return <ProductCard key={product.articleNumber} data={product}/>
         }):
         <p className={styles.empty}>No products to display</p>}
       </section>
-
     </main>
   );
 }

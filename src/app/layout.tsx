@@ -5,7 +5,6 @@ import Header from "@/components/Header/Header"
 import {CartWrapper} from "@/lib/CartStateWrapper"
 
 const spaceGrotesk = Space_Grotesk({
-  weight:["400"],
   variable: "--spaceGrotesk",
   subsets: ["latin"],
 });

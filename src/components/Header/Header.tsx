@@ -4,8 +4,8 @@ import styles from './Header.module.css'
 import Link from 'next/link'
 import {getBranding} from '@/lib/api'
 
-const branding = await getBranding();
 export default async function Header(){
+    const branding = await getBranding();
     return(
         <header className={styles.headerContainer}>
             <Link href="/" className={styles.brand}>
@@ -17,7 +17,7 @@ export default async function Header(){
                 src={branding.logo.url}
                 alt={branding.logo.altText}
                 />
-            :<div aria-hidden="true" className={styles.logoFallback}>C</div>
+            :<div aria-hidden="true" className={styles.logoFallback}></div>
             }
             <h1>{branding.title ?? "Columbus Graduate Program Recruitment Task"}</h1>
             </Link>

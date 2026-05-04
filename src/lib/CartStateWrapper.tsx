@@ -11,9 +11,14 @@ const CartContext = createContext<CartContentType | null>(null);
 //context provider
 export function CartWrapper({children}:Readonly<{children:React.ReactNode}>){
     const [cartCounter, setCartCounter] = useState(0);
-    const addToCart = ()=>{
-        setCartCounter(prev=>prev+1)
+
+    const addToCart = async ()=>{
+        const cartUpdatedStatus = await new Promise(resolve => setTimeout(()=>{resolve(true)},500)); //fake request for cart update 
+        if(cartUpdatedStatus){
+            setCartCounter(prev=>prev+1)
+        }
     }
+
     const contextVar = {cartCounter,addToCart}
     return(
         <CartContext value={contextVar}>
@@ -24,5 +29,9 @@ export function CartWrapper({children}:Readonly<{children:React.ReactNode}>){
 
 //hook to get context in children
 export function useCartState(){
-    return useContext(CartContext);
+    const context = useContext(CartContext);
+    if(!context){
+        throw new Error("useCartState must be called inside a CartWrapper")
+    }
+    return context;
 }

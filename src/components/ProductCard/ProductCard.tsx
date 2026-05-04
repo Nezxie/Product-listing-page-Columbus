@@ -9,7 +9,7 @@ export default function ProductCard({data}:{data:Product}){
     return(
         <article className={styles.card}>
           <div className={styles.productImageContainer}>
-          {data.promotion?<span className={styles.promotionLabel}>{`${data.promotion.name}: -${data.promotion.percentage}%`}</span>:""}
+          {data.promotion&&<span className={styles.promotionLabel}>{`${data.promotion.name}: -${data.promotion.percentage}%`}</span>}
              <Image
                       src={data.image.url}
                       alt={data.image.altText}
@@ -24,9 +24,10 @@ export default function ProductCard({data}:{data:Product}){
             <div className={styles.priceContainer}>
               <div>
                 <p className={data.promotion?styles.crossedOutPrice:styles.price}>{formatCurrency(data.price)}</p>
-                {data.promotion?
+                {
+                data.promotion&&
                 <p className={styles.price}>{formatCurrency(getDiscountedPrice(data.price,data.promotion.percentage))}</p>
-                  :""}
+                }
               </div>
               <AddToCartButton/>
             </div>
